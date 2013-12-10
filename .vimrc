@@ -70,6 +70,35 @@ nmap <leader>jA mA:Ack "<C-r>=expand("<cWord>")<cr>"
 
 let g:ctrl_map = '<c-p>'
 
+"neocomplcache
 let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_smart_case=1
+let g:neocomplcache_min_syntax_length=4
+let g:neocomplcache_lock_buffer_name_pattern='\*ku\*'
+
+let g:neocomplcache_dictionary_filetype_lists = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+    \ }
+
+if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+inoremap <expr><C-g>    neocomplcache#undo_completion()
+inoremap <expr><C-l>    neocomplcache#complete_common_string()
+inoremap <expr><TAB>    pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h>    neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>     neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>    neocomplcache#close_popup()
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+"
 
 let g:syntastic_c_checkers=['make']
