@@ -1,9 +1,22 @@
 set nocompatible
 
-"pathogen
-call pathogen#infect()
+"vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()
+filetype plugin indent on
 "
-"autocmd vimenter * NERDTree
 
 set title
 
@@ -35,8 +48,8 @@ endif
 syntax enable
 
 filetype on
-filetype plugin on
-filetype indent on
+"filetype plugin on
+"filetype indent on
 
 "solarized
 set background=dark
@@ -95,10 +108,17 @@ inoremap <expr><BS>     neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>    neocomplcache#close_popup()
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "
 
 let g:syntastic_c_checkers=['make']
+
+"scala
+hi scalaNew gui=underline
+hi scalaMethodCall gui=italic
+hi scalaValName gui=underline
+hi scalaVarName gui=underline
