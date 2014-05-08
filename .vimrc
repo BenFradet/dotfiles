@@ -13,6 +13,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype plugin indent on
@@ -115,9 +116,8 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "
 
-let g:syntastic_c_checkers=['make']
-
 "scala
+let g:syntastic_c_checkers=['make']
 hi scalaNew gui=underline
 hi scalaMethodCall gui=italic
 hi scalaValName gui=underline
