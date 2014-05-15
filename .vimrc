@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
@@ -39,6 +40,8 @@ set noerrorbells
 set backspace=indent,eol,start
 
 set hidden
+
+set laststatus=2
 
 if exists('+colorcolumn')
     set colorcolumn=80
@@ -122,3 +125,6 @@ hi scalaNew gui=underline
 hi scalaMethodCall gui=italic
 hi scalaValName gui=underline
 hi scalaVarName gui=underline
+
+"airline
+let g:airline_powerline_fonts=1
