@@ -55,7 +55,13 @@ plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vagrant vi-m
 # User configuration
 
 export PATH="/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ben/bin"
+export PATH="/opt/idea-IC-143.1821.5/bin:$PATH"
+export PATH="/opt/scala-2.11.7/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+export JAVA_HOME="/usr/java/jdk1.8.0_71"
+export SCALA_HOME="/opt/scala-2.11.7"
+
+setxkbmap -option grp:alt_shift_toggle us,fr
 
 source $ZSH/oh-my-zsh.sh
 
