@@ -163,3 +163,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec toggletouchpad.sh # toggle touchpad
+
+# Background wallpaper
+exec --no-startup-id feh --bg-scale bg.jpg
