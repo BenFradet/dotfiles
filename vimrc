@@ -14,7 +14,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'bling/vim-airline'
+"Plugin 'ensime/ensime-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
@@ -22,7 +24,8 @@ filetype plugin indent on
 
 set title
 
-set number
+"set number
+set relativenumber
 set ruler
 set wrap
 
@@ -44,9 +47,9 @@ set hidden
 set laststatus=2
 
 if exists('+colorcolumn')
-    set colorcolumn=80
+    set colorcolumn=100
 else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
 endif
 
 syntax enable
@@ -126,5 +129,15 @@ hi scalaMethodCall gui=italic
 hi scalaValName gui=underline
 hi scalaVarName gui=underline
 
+"sudo edit
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+"ensime
+"autocmd BufWritePost *.scala silent :EnTypeCheck
+"nnoremap <localleader>t :EnTypeCheck<CR>
+"au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
+
 "airline
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='solarized'
