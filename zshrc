@@ -7,6 +7,8 @@ export ZSH=/home/ben/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
+PRIMARY_FG="white"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -49,16 +51,21 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vagrant vi-mode vundle)
+plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vagrant vi-mode vundle zsh-dircolors-solarized docker docker-compose)
 
 # User configuration
 
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b16.fc25.x86_64/"
+export SCALA_HOME="/opt/scala-2.12.1"
+export SBT_OPTS="-XX:MaxMetaspaceSize=512m -Xms2048m -Xmx2048m"
+export GOPATH="$HOME/Documents/go"
+
 export PATH="/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ben/bin"
-export PATH="/opt/idea-IC-143.1821.5/bin:$PATH"
-export PATH="/opt/scala-2.11.7/bin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-export JAVA_HOME="/usr/java/jdk1.8.0_71"
-export SCALA_HOME="/opt/scala-2.11.7"
+export PATH="/opt/scala-2.12.1/bin:$PATH"
+export PATH="/opt/spark-2.4.1-bin-hadoop2.7/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="$(go env GOPATH)/bin:$PATH"
+export PATH="/home/ben/.rbenv/bin:$PATH"
 
 setxkbmap -option grp:alt_shift_toggle us,fr
 
@@ -72,17 +79,29 @@ export DEFAULT_USER=`whoami`
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+alias urldecode='python -c "import sys, urllib as ul; \
+        print ul.unquote_plus(sys.argv[1])"'
+alias urlencode='python -c "import sys, urllib as ul; \
+        print ul.quote_plus(sys.argv[1])"'
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+alias clip='xclip -sel clip'
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+git-count() {
+    git rev-list $1.. --count
+}
+
+export TOKEN=XX
+
+#alias spotify='flatpak run com.spotify.Client &'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.local/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+# added by travis gem
+[ -f /home/ben/.travis/travis.sh ] && source /home/ben/.travis/travis.sh
