@@ -1,0 +1,5 @@
+[user]
+	email = benjamin.fradet@gmail.com
+	name = Ben Fradet
+[core]
+	excludesfile = /home/ben/.gitignore_global
