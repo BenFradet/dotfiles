@@ -25,7 +25,7 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono:pixelsize=15' -sb '#007fff'
 
 # change focus
 bindsym $mod+h focus left
@@ -95,6 +95,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        mode hide
         colors {
             background #000000
             statusline #ffffff
@@ -108,6 +109,7 @@ bar {
         }
         position top
         status_command i3status -c ~/.i3/i3status.conf
+        modifier $mod
 }
 
 # shortcut for moving a workspace to another monitor
@@ -117,15 +119,17 @@ bindsym $mod+m move workspace to output left
 bindsym Ctrl+Mod1+l exec sh ~/.i3/i3lock.sh
 bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
 
-# xfce4-notify
-for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
+# remove titlebars
+for_window [class="^.*"] border pixel 0
 
 # names for the i3 tags
 set $tag1 "1: www"
-set $tag2 "2: intellij"
-set $tag3 "3: term"
-set $tag4 "4: term"
-set $tag5 "5: win"
+set $tag2 "2: code"
+set $tag3 "3"
+set $tag4 "4: zoom"
+set $tag5 "5"
+set $tag6 "6: spotify"
+set $tag7 "7: trs"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -133,8 +137,8 @@ bindsym $mod+2 workspace $tag2
 bindsym $mod+3 workspace $tag3
 bindsym $mod+4 workspace $tag4
 bindsym $mod+5 workspace $tag5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
+bindsym $mod+6 workspace $tag6
+bindsym $mod+7 workspace $tag7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
@@ -145,8 +149,8 @@ bindsym $mod+Shift+at move container to workspace $tag2
 bindsym $mod+Shift+numbersign move container to workspace $tag3
 bindsym $mod+Shift+dollar move container to workspace $tag4
 bindsym $mod+Shift+percent move container to workspace $tag5
-bindsym $mod+Shift+asciicircum move container to workspace 6
-bindsym $mod+Shift+ampersand move container to workspace 7
+bindsym $mod+Shift+asciicircum move container to workspace $tag6
+bindsym $mod+Shift+ampersand move container to workspace $tag7
 bindsym $mod+Shift+asterisk move container to workspace 8
 bindsym $mod+Shift+parenleft move container to workspace 9
 bindsym $mod+Shift+parenright move container to workspace 10
@@ -165,4 +169,5 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym XF86TouchpadToggle exec toggletouchpad.sh # toggle touchpad
 
 # Background wallpaper
-exec --no-startup-id feh --bg-scale bg.jpg
+exec --no-startup-id sh ~/.i3/background.sh
+exec --no-startup-id "redshift-gtk -l 52.3:-7.11 -g 1.0 -m randr"
