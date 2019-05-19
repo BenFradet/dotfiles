@@ -5,7 +5,8 @@ export ZSH=/home/ben/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
+SPACESHIP_VI_MODE_SHOW=false
 
 PRIMARY_FG="white"
 
@@ -51,21 +52,13 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vagrant vi-mode vundle zsh-dircolors-solarized docker docker-compose)
+plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vagrant vi-mode vundle docker docker-compose)
 
 # User configuration
 
-export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b16.fc25.x86_64/"
-export SCALA_HOME="/opt/scala-2.12.1"
 export SBT_OPTS="-XX:MaxMetaspaceSize=512m -Xms2048m -Xmx2048m"
-export GOPATH="$HOME/Documents/go"
 
 export PATH="/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ben/bin"
-export PATH="/opt/scala-2.12.1/bin:$PATH"
-export PATH="/opt/spark-2.4.1-bin-hadoop2.7/bin:$PATH"
-export PATH="/usr/local/go/bin:$PATH"
-export PATH="$(go env GOPATH)/bin:$PATH"
-export PATH="/home/ben/.rbenv/bin:$PATH"
 
 setxkbmap -option grp:alt_shift_toggle us,fr
 
@@ -92,16 +85,3 @@ git-count() {
 
 export TOKEN=XX
 
-#alias spotify='flatpak run com.spotify.Client &'
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.local/bin"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi
-
-# added by travis gem
-[ -f /home/ben/.travis/travis.sh ] && source /home/ben/.travis/travis.sh
