@@ -12,7 +12,6 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font xft:Ubuntu Mono 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -108,7 +107,8 @@ bar {
             urgent_workspace        #aa0000     #990000     #ffffff
         }
         position top
-        status_command i3status -c ~/.i3/i3status.conf
+        status_command ~/bin/i3status-rs ~/.i3/i3status-rust.toml
+        font xft:DejaVu Sans Mono, FontAwesome 12
         modifier $mod
 }
 
@@ -124,13 +124,12 @@ bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/scre
 for_window [class="^.*"] border pixel 0
 
 # names for the i3 tags
-set $tag1 "1: www"
-set $tag2 "2: code"
-set $tag3 "3"
-set $tag4 "4: zoom"
-set $tag5 "5"
-set $tag6 "6: spotify"
-set $tag7 "7: trs"
+set $tag1 "1🌍"
+set $tag2 "2>_"
+set $tag3 "3>_"
+set $tag4 "4>_"
+set $tag5 "5🖂"
+set $tag6 "6♪"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -158,9 +157,9 @@ bindsym $mod+Shift+parenright move container to workspace 10
 
 # Fn keys
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -171,4 +170,4 @@ bindsym XF86TouchpadToggle exec toggletouchpad.sh # toggle touchpad
 
 # Background wallpaper
 exec --no-startup-id sh ~/.i3/background.sh
-exec --no-startup-id "redshift-gtk -l 52.3:-7.11 -g 1.0 -m randr"
+exec --no-startup-id "xset m 4 8"
