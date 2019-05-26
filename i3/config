@@ -150,7 +150,7 @@ bindsym $mod+Shift+numbersign move container to workspace $tag3
 bindsym $mod+Shift+dollar move container to workspace $tag4
 bindsym $mod+Shift+percent move container to workspace $tag5
 bindsym $mod+Shift+asciicircum move container to workspace $tag6
-bindsym $mod+Shift+ampersand move container to workspace $tag7
+bindsym $mod+Shift+ampersand move container to workspace 7
 bindsym $mod+Shift+asterisk move container to workspace 8
 bindsym $mod+Shift+parenleft move container to workspace 9
 bindsym $mod+Shift+parenright move container to workspace 10
