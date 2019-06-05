@@ -56,7 +56,7 @@ plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vagrant vi-m
 
 # User configuration
 
-export SBT_OPTS="-XX:MaxMetaspaceSize=512m -Xms2048m -Xmx2048m"
+export SBT_OPTS="-XX:MaxMetaspaceSize=512m -Xms2048m -Xmx2048m -Xss64m"
 
 export PATH="/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ben/bin"
 
@@ -83,5 +83,5 @@ git-count() {
     git rev-list $1.. --count
 }
 
-export TOKEN=XX
+export TOKEN=xx
 
