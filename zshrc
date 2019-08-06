@@ -52,7 +52,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vagrant vi-mode vundle docker docker-compose)
+plugins=(catimg colored-man-pages colorize docker git mvn scala sbt vi-mode vundle)
 
 # User configuration
 
