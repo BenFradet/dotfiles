@@ -6,17 +6,13 @@
     "editor.wordWrap": "on",
     "editor.wrappingIndent": "indent",
     "editor.tabSize": 2,
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "workbench.sideBar.location": "right",
     "workbench.activityBar.visible": true,
-    "go.goroot": "/usr/local/go",
-    "go.gopath": "/home/ben/Documents/go",
     "window.menuBarVisibility": "toggle",
     "files.associations": {
         "*.sbt": "scala",
-        "*.hocon.sample": "hocon",
         "*.hocon": "hocon",
-        "1-0-0": "json",
         "*.json": "json"
     },
     "files.trimTrailingWhitespace": true,
