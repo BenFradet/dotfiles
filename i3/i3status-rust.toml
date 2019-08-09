@@ -42,4 +42,4 @@ alert = 10.0
 [[block]]
 block = "time"
 interval = 60
-format = "%d/%m %R"
+format = "%m-%d %T"
