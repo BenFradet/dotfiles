@@ -130,6 +130,8 @@ set $tag3 "3>_"
 set $tag4 "4>_"
 set $tag5 "5🖂"
 set $tag6 "6♪"
+set $tag7 "7🖌"
+set $tag8 "8🏵"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -138,8 +140,8 @@ bindsym $mod+3 workspace $tag3
 bindsym $mod+4 workspace $tag4
 bindsym $mod+5 workspace $tag5
 bindsym $mod+6 workspace $tag6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
+bindsym $mod+7 workspace $tag7
+bindsym $mod+8 workspace $tag8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
@@ -150,8 +152,8 @@ bindsym $mod+Shift+numbersign move container to workspace $tag3
 bindsym $mod+Shift+dollar move container to workspace $tag4
 bindsym $mod+Shift+percent move container to workspace $tag5
 bindsym $mod+Shift+asciicircum move container to workspace $tag6
-bindsym $mod+Shift+ampersand move container to workspace 7
-bindsym $mod+Shift+asterisk move container to workspace 8
+bindsym $mod+Shift+ampersand move container to workspace $tag7
+bindsym $mod+Shift+asterisk move container to workspace $tag8
 bindsym $mod+Shift+parenleft move container to workspace 9
 bindsym $mod+Shift+parenright move container to workspace 10
 
