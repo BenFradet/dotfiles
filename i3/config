@@ -132,6 +132,7 @@ set $tag5 "5🖂"
 set $tag6 "6♪"
 set $tag7 "7🖌"
 set $tag8 "8🏵"
+set $tag9 "9📽"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -142,7 +143,7 @@ bindsym $mod+5 workspace $tag5
 bindsym $mod+6 workspace $tag6
 bindsym $mod+7 workspace $tag7
 bindsym $mod+8 workspace $tag8
-bindsym $mod+9 workspace 9
+bindsym $mod+9 workspace $tag9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
@@ -154,7 +155,7 @@ bindsym $mod+Shift+percent move container to workspace $tag5
 bindsym $mod+Shift+asciicircum move container to workspace $tag6
 bindsym $mod+Shift+ampersand move container to workspace $tag7
 bindsym $mod+Shift+asterisk move container to workspace $tag8
-bindsym $mod+Shift+parenleft move container to workspace 9
+bindsym $mod+Shift+parenleft move container to workspace $tag9
 bindsym $mod+Shift+parenright move container to workspace 10
 
 # Fn keys
