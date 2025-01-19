@@ -1,0 +1,13 @@
+[credential]
+	helper = cache
+[user]
+	name = benfradet
+	email = benjamin.fradet@gmail.com
+[core]
+	excludesfile = /home/ben/.gitignore_global
+    fileMode = false
+[init]
+	defaultBranch = main
+[oh-my-zsh]
+	hide-status = 1
+	hide-dirty = 1
