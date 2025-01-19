@@ -1,0 +1,35 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/ben/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+font-family = "Fira Code"
+font-size = 12
+theme = catppuccin-mocha
+cursor-invert-fg-bg = true
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+background-opacity = 0.9
+background-blur-radius = true
+maximize = true
+fullscreen = true
+window-subtitle = working-directory
+focus-follows-mouse = true
+gtk-titlebar-hide-when-maximized = true
+bold-is-bright = true
