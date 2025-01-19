@@ -5,3 +5,4 @@ dunst-project/dunst
 Hummer12007/brightnessctl
 kennylevinsen/wlsunset
 greshake/i3status-rust
+bugaevc/wl-clipboard
