@@ -16,3 +16,5 @@ map("n", "<leader>p", "<CMD>split<CR>")
 map("n", "<C-U>", "<C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>")
 map("n", "<C-D>", "<C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>")
 
+-- neotest
+map("n", "<leader>t", "<CMD>lua require('neotest').run.run()<CR>")
