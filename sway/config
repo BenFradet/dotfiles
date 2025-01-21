@@ -229,7 +229,7 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
 
 # Special key to take a screenshot with grim
-bindsym Print exec grim '%Y-%m-%d-%T_$wx$h_grim.png' -e 'mv $f $HOME/Pictures/Screenshots/'
+bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png')
 
 #
 # Status Bar:
