@@ -1,6 +1,5 @@
-require("me.settings")
 require("me.maps")
-require("me.opts")
+require("me.settings")
 require("config.lazy")
 
 vim.cmd [[
