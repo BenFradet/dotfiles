@@ -18,3 +18,7 @@ map("n", "<C-D>", "<C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><
 
 -- neotest
 map("n", "<leader>t", "<CMD>lua require('neotest').run.run()<CR>")
+
+-- lsp
+map("n", "<leader>r", vim.lsp.buf.rename)
+map("n", "<leader>h", vim.lsp.buf.hover)
