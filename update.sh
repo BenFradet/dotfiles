@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DIR=$(dirname "$0")
+
+cp -r $HOME/.config/nvim $DIR
+cp -r $HOME/.config/i3status-rust $DIR
+cp -r $HOME/.config/sway $DIR
+cp -r $HOME/.config/tofi $DIR
+cp -r $HOME/.config/ghostty $DIR
+
+cp $HOME/.zshrc $DIR/zsh/.zshrc
+sed -i '/^## CLEAN/,/^## CLEAN/{/^## CLEAN/!d;}' $DIR/zsh/.zshrc

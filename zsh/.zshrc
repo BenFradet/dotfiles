@@ -1,5 +1,5 @@
-# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.local/share/coursier/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
@@ -17,8 +17,13 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
 
+## CLEAN
+## CLEAN
+
 # alias
 alias tf="terraform"
+alias vim="nvim"
+alias mailspring='mailspring --password-store="gnome-libsecret"'
 
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

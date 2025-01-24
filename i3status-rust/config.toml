@@ -12,7 +12,7 @@ bat_charging = "|^| "
 [[block]]
 block = "battery"
 interval = 10
-format = "{percentage}% {time}"
+format = " $icon $percentage {$time_remaining.dur(hms:true, min_unit:m) |}"
 
 [[block]]
 block = "sound"

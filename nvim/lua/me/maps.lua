@@ -6,7 +6,7 @@ end
 
 -- NeoTree
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
-map("n", "<leader>r", "<CMD>Neotree focus<CR>")
+map("n", "<leader>q", "<CMD>Neotree focus<CR>")
 
 -- New Windows
 map("n", "<leader>o", "<CMD>vsplit<CR>")
