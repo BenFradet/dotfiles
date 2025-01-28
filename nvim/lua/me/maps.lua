@@ -34,3 +34,4 @@ km.set("n", "<leader>h", vim.lsp.buf.hover, { desc = "hover" })
 -- buffers
 map("n", "<Tab>", "<CMD>bnext<CR>")
 map("n", "<S-Tab>", "<CMD>bprev<CR>")
+map("n", "<leader>bd", "<CMD>%bd|e#<CR>")
