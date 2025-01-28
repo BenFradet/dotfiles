@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+include catppuccin-macchiato
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -246,16 +248,38 @@ bar {
     modifier $mod
 
     colors {
-        background #000000
-        statusline #ffffff
+        background         $base
+        statusline         $text
+        focused_statusline $text
+        focused_separator  $base
+
+        # target           border bg        text
+        focused_workspace  $base  $mauve    $crust
+        active_workspace   $base  $surface2 $text
+        inactive_workspace $base  $base     $text
+        urgent_workspace   $base  $red      $crust
+
+        #background #000000
+        #statusline #ffffff
         #separator  #666666
 
         # type                  border      background  font
-        focused_workspace       #008fff     #007fff     #ffffff
-        active_workspace        #333333     #5f676a     #ffffff
-        inactive_workspace      #333333     #222222     #888888
-        urgent_workspace        #aa0000     #990000     #ffffff
+        #focused_workspace       #008fff     #007fff     #ffffff
+        #active_workspace        #333333     #5f676a     #ffffff
+        #inactive_workspace      #333333     #222222     #888888
+        #urgent_workspace        #aa0000     #990000     #ffffff
     }
 }
+
+#
+# Themes:
+#
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 include /etc/sway/config.d/*
