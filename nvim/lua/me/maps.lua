@@ -25,7 +25,8 @@ map("n", "<C-U>", "<C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><
 map("n", "<C-D>", "<C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>")
 
 -- neotest
-km.set("n", "<leader>t", "<CMD>lua require('neotest').run.run()<CR>", { desc = "run test" })
+km.set("n", "<leader>tt", "<CMD>lua require('neotest').run.run()<CR>", { desc = "run test" })
+km.set("n", "<leader>ts", "<CMD>lua require('neotest').run.stop()<CR>", { desc = "stop test" })
 
 -- lsp
 km.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "rename" })
