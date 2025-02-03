@@ -9,6 +9,7 @@ cp -r $HOME/.config/tofi $DIR
 cp -r $HOME/.config/ghostty $DIR
 cp -r $HOME/.config/dunst $DIR
 cp -r $HOME/.config/starship.toml $DIR/starship
+cp -r $HOME/.config/btop $DIR
 
 cp $HOME/.zshrc $DIR/zsh/.zshrc
 sed -i '/^## DANGER ZONE/,/^## DANGER ZONE/d' $DIR/zsh/.zshrc
