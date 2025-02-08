@@ -21,7 +21,7 @@ block = "sound"
 block = "hueshift"
 hue_shifter = "wlsunset"
 step = 50
-click_temp = 3500
+click_temp = 2500
 format = "\uf185 $temperature"
 
 [[block]]
