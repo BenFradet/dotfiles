@@ -17,6 +17,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
 
+export GTK_THEME=oomox-mocha
+
 
 # alias
 alias tf="terraform"
