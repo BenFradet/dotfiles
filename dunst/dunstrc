@@ -1,6 +1,9 @@
 [global]
-width = 300
-height = 200
+width = 400
+height = 300
+font = "Cantarell 12"
+icon_theme = "Papirus-Dark"
+corners = "all"
 frame_color = "#8aadf4"
 separator_color= frame
 highlight = "#8aadf4"
