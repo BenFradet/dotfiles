@@ -7,7 +7,7 @@ cp -r $HOME/.config/i3status-rust $DIR
 cp -r $HOME/.config/sway $DIR
 cp -r $HOME/.config/tofi $DIR
 cp -r $HOME/.config/ghostty $DIR
-cp -r $HOME/.config/dunst $DIR
+cp -r $HOME/.config/swaync $DIR
 cp -r $HOME/.config/starship.toml $DIR/starship
 cp -r $HOME/.config/btop $DIR
 cp -r $HOME/.config/swaylock $DIR

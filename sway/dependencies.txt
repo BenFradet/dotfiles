@@ -1,8 +1,9 @@
 francma/wob
 philj56/tofi
 artemsen/swayimg
-dunst-project/dunst
 Hummer12007/brightnessctl
 kennylevinsen/wlsunset
 greshake/i3status-rust
 bugaevc/wl-clipboard
+nwg-piotr/nwg-look
+ErikReider/SwayNotificationCenter

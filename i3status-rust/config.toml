@@ -42,6 +42,11 @@ warning_mem = 70
 critical_mem = 90
 
 [[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:20,rot_interval:0.20) $play $next |}"
+player = "firefox.instance_1_30"
+
+[[block]]
 block = "kdeconnect"
 format = " $icon {$bat_icon $bat_charge |}{$notif_icon |}{$network_icon$network_strength $network_type |}"
 bat_good = 101
