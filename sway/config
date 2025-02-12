@@ -25,7 +25,8 @@ set $menu tofi-run | xargs swaymsg exec --
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg $HOME/Pictures/f39-01-night.jpg fill
 
-default_border pixel 1
+default_border pixel 2
+gaps inner 5
 
 ### wob
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
