@@ -44,7 +44,7 @@ critical_mem = 90
 [[block]]
 block = "music"
 format = " $icon {$combo.str(max_w:20,rot_interval:0.20) $play $next |}"
-player = "firefox.instance_1_30"
+player = "firefox.instance_1"
 
 [[block]]
 block = "kdeconnect"
@@ -54,3 +54,14 @@ bat_good = 101
 [[block]]
 block = "time"
 interval = 60
+
+[[block]]
+block = "notify"
+format = " $icon {($notification_count.eng(w:1)) |}"
+driver = "swaync"
+[[block.click]]
+button = "left"
+action = "show"
+[[block.click]]
+button = "right"
+action = "toggle_paused"
