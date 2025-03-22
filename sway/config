@@ -38,6 +38,9 @@ exec wlsunset -l 43.29 -L 5.38
 ### sway nc
 exec swaync
 
+### nm
+exec_always nm-applet --indicator
+
 ### gnome interop
 set $gnome-schema org.gnome.desktop.interface
 
