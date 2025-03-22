@@ -1,7 +1,7 @@
 @define-color cc-bg #24273a;
 @define-color cc-bg-alpha rgba(36, 39, 58, 0.8);
 
-@define-color noti-text-color rgb(205, 214, 244);
+@define-color noti-text-color #cdd6f4;
 @define-color noti-border-color #b4befe;
 @define-color noti-bg rgb(30, 30, 46);
 @define-color noti-bg-hover rgb(30, 30, 46);
@@ -14,13 +14,21 @@
 
 @define-color bg-selected  rgb(166, 227, 161);
 
+@define-color cc-bg rgba(46, 46, 46, 0.7);
+@define-color noti-bg rgba(48, 48, 48, 0.8);
+@define-color noti-bg-opaque rgb(48, 48, 48);
+@define-color noti-bg-darker rgb(38, 38, 38);
+@define-color noti-bg-hover rgb(56, 56, 56);
+@define-color noti-bg-hover-opaque rgb(56, 56, 56);
+@define-color noti-bg-focus rgba(68, 68, 68, 0.6);
+@define-color noti-close-bg rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
+@define-color text-color #cdd6f4;
+@define-color text-color-disabled rgb(150, 150, 150);
+
 * {
     font-family: "Cantarell";
     font-size:   16px;
-}
-
-.blank-window {
-  background: transparent;
 }
 
 .notification-row {
@@ -33,41 +41,40 @@
 }
 
 .notification {
-  border-radius: 12px;
-  margin: 30px 30px;
   padding: 0;
+  border-radius: 0px;
 }
 
 .critical {
   background: @bg-selected;
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 /* Uncomment to enable specific urgency colors
 .low {
   background: yellow;
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .normal {
   background: green;
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .critical {
   background: red;
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 */
 
 .notification-content {
   background: transparent;
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .close-button {
@@ -98,6 +105,7 @@
   box-shadow: none;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
+  border-radius: 0px;
   color: white;
 }
 
@@ -108,7 +116,7 @@
 }
 
 .notification-default-action {
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 /* When alternative actions are visible */
@@ -139,7 +147,7 @@
 .body-image {
   margin-top: 6px;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .summary {
@@ -171,7 +179,7 @@
   background: @cc-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .control-center-clear-all:hover {
@@ -179,10 +187,10 @@
 }
 
 .control-center-dnd {
-  border-radius: 12px;
   background: @noti-bg;
   border: 2px solid @noti-border-color;
   box-shadow: none;
+  border-radius: 0px;
 }
 
 .control-center-dnd:checked {
@@ -195,7 +203,6 @@
 
 .control-center-dnd slider {
   background: @noti-bg-hover;
-  border-radius: 12px;
 }
 
 /* The .control-center Window.
@@ -203,7 +210,8 @@
  */
 .control-center {
   background: @cc-bg-alpha;
-  border: 1px solid @noti-border-color;
+  border: 2px solid @noti-border-color;
+  border-radius: 0px;
 }
 
 /* The first control-center child. May be easier to style this than .control-center */
@@ -221,4 +229,14 @@
 /* Window behind control center and on all other monitors */
 .blank-window {
   background: transparent;
+}
+
+.widget-mpris .widget-mpris-player {
+  border-radius: 0px;
+  border: 2px solid @noti-border-color;
+}
+
+.widget-mpris .widget-mpris-player .widget-mpris-album-art {
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }
