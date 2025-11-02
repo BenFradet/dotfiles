@@ -44,7 +44,7 @@ critical_mem = 90
 [[block]]
 block = "music"
 format = " $icon {$combo.str(max_w:20,rot_interval:0.20) $play $next |}"
-player = "firefox.instance_1"
+player = "firefox"
 
 [[block]]
 block = "kdeconnect"

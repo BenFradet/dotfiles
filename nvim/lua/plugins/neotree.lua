@@ -1,18 +1,22 @@
 return {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons",
-        "MunifTanjim/nui.nvim",
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "MunifTanjim/nui.nvim",
+  },
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = false,
+        hide_gitignored = false,
+      },
     },
-    opts = {
-        filesystem = {
-            filtered_items = {
-                visible = true,
-                hide_dotfiles = false,
-                hide_gitignored = false,
-            },
-        },
-    },
+    mappings = {
+      ["z"] = "close_all_nodes",
+      ["Z"] = "expand_all_nodes",
+    }
+  },
 }
