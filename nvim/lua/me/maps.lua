@@ -31,6 +31,7 @@ km.set("n", "<leader>ts", "<CMD>lua require('neotest').run.stop()<CR>", { desc =
 -- lsp
 km.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "rename" })
 km.set("n", "<leader>h", vim.lsp.buf.hover, { desc = "hover" })
+km.set("n", "<leader>fm", vim.lsp.buf.format, { desc = "format" })
 
 -- buffers
 map("n", "<Tab>", "<CMD>bnext<CR>")
